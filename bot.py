@@ -5,8 +5,8 @@ import json, os
 TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
 CHAT_ID = os.environ["CHAT_ID"]
 SEEN_FILE = "seen_jobs.json"
-SEARCH_URL = "https://sainsburys.jobs/jobs?location=Coventry"
-KEYWORDS = ["online assistant", "home delivery", "driver"]
+SEARCH_URL = "https://www.sainsburys.jobs/jobs?full_time=&part_time=&fixed_term=&filter_by=&location=Tonbridge&keywords=Online+Assistant"
+KEYWORDS = ["online assistant", "Online" , "Assistant]
 
 def load_seen():
     if os.path.exists(SEEN_FILE):
