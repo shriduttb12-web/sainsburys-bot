@@ -2,17 +2,19 @@ name: Sainsburys Job Bot
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # runs every 15 minutes
-  workflow_dispatch:         # lets you run it manually too
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
 
 jobs:
   check-jobs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
