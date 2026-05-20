@@ -54,6 +54,7 @@ if new_targets:
                f"<b>{title}</b>\n<a href='{link}'>Apply here</a>")
         send_telegram(msg)
         print(f"Alert sent: {title}")
-    save_seen(seen)
 else:
     print("No new matching jobs found.")
+
+save_seen(seen)  # always save, even if nothing new
